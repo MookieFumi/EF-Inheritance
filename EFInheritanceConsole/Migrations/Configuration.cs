@@ -3,14 +3,14 @@ using EFInheritanceConsole.Model;
 
 namespace EFInheritanceConsole.Migrations
 {
-    internal sealed class Configuration : DbMigrationsConfiguration<AppContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<CalendarioContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(AppContext context)
+        protected override void Seed(CalendarioContext context)
         {
             //  This method will be called after migrating to the latest version.
 

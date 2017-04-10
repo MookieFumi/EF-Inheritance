@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace EFInheritanceConsole.Model
+namespace EFInheritanceConsole.Model.Entities
 {
     public class Canal
     {
@@ -10,6 +10,7 @@ namespace EFInheritanceConsole.Model
         public int EmpresaId { get; set; }
         public virtual Empresa Empresa { get; set; }
 
-        public virtual IEnumerable<TurnoCanal> Turnos { get; set; }
+        public virtual ICollection<Tienda> Tiendas { get; set; }
+        public virtual ICollection<TurnoCanal> Turnos { get; set; }
     }
 }

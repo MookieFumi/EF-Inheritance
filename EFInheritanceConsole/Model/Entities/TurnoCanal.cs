@@ -1,4 +1,4 @@
-namespace EFInheritanceConsole.Model
+namespace EFInheritanceConsole.Model.Entities
 {
     public class TurnoCanal : Turno
     {

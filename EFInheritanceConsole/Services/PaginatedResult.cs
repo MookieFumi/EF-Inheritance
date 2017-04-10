@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+
+namespace EFInheritanceConsole.Services
+{
+    public class PaginatedResult<T>
+    {
+        public PaginatedResult(int pageIndex, int pageSize, IEnumerable<T> result, int totalCount)
+        {
+            Result = result;
+            PageIndex = pageIndex;
+            PageSize = pageSize;
+            TotalCount = totalCount;
+        }
+
+        public IEnumerable<T> Result { get; private set; }
+        public int PageIndex { get; set; }
+        public int PageSize { get; set; }
+        public int TotalCount { get; set; }
+
+        public int TotalPageCount
+        {
+            get { return (int) Math.Ceiling(TotalCount / (double) PageSize); }
+        }
+
+        public bool HasPreviousPage
+        {
+            get { return (PageIndex > 1); }
+        }
+
+        public bool HasNextPage
+        {
+            get { return (PageIndex < TotalPageCount); }
+        }
+    }
+}

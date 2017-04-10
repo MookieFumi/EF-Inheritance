@@ -1,4 +1,5 @@
 using System.Data.Entity.ModelConfiguration;
+using EFInheritanceConsole.Model.Entities;
 
 namespace EFInheritanceConsole.Model.Configurations
 {
@@ -6,6 +7,7 @@ namespace EFInheritanceConsole.Model.Configurations
     {
         public TurnoCanalConfiguration()
         {
+            HasRequired(p => p.Canal).WithMany().WillCascadeOnDelete(true);
         }
     }
 }

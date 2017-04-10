@@ -1,4 +1,5 @@
 using System.Data.Entity.ModelConfiguration;
+using EFInheritanceConsole.Model.Entities;
 
 namespace EFInheritanceConsole.Model.Configurations
 {
@@ -9,11 +10,6 @@ namespace EFInheritanceConsole.Model.Configurations
             ToTable("Turnos");
             Property(p => p.Nombre).IsRequired();
             Property(p => p.Abreviatura).HasMaxLength(3).IsRequired();
-
-
-            HasRequired(p => p.Empresa)
-                .WithMany()
-                .WillCascadeOnDelete(false);
         }
     }
 }

@@ -52,24 +52,70 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DecisionPlatformException.cs" />
+    <Compile Include="Migrations\201704060727186_Initial.cs" />
+    <Compile Include="Migrations\201704060727186_Initial.Designer.cs">
+      <DependentUpon>201704060727186_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\CalendarioService.cs" />
+    <Compile Include="Services\DTO\CalendarioAusenciaDTO.cs" />
+    <Compile Include="Services\DTO\CalendarioFiltro.cs" />
+    <Compile Include="Services\DTO\CalendarioTiendaDTO.cs" />
+    <Compile Include="Services\DTO\CalendarioTurnoHoraDTO.cs" />
+    <Compile Include="Services\DTO\CalendarioUsuarioDTO.cs" />
+    <Compile Include="Services\DTO\CalendarioVacacionesDTO.cs" />
+    <Compile Include="Services\DTO\AñoMes.cs" />
+    <Compile Include="Services\DTO\CanalDTO.cs" />
+    <Compile Include="Services\DTO\TiendaDTO.cs" />
+    <Compile Include="Services\DTO\UsuarioDTO.cs" />
+    <Compile Include="Services\ICalendarioService.cs" />
+    <Compile Include="Services\DTO\UsuarioTiendaDTO.cs" />
+    <Compile Include="Services\DTO\UsuarioTiendaNivelDTO.cs" />
+    <Compile Include="Services\OrdernationConfiguration.cs" />
+    <Compile Include="Services\PaginatedConfiguration.cs" />
+    <Compile Include="Services\PaginatedResult.cs" />
+    <Compile Include="Services\SortDirection.cs" />
+    <Compile Include="TurnoEstatico.cs" />
+    <Compile Include="TurnoEstaticoExtensions.cs" />
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Model\AppContext.cs" />
-    <Compile Include="Model\Canal.cs" />
+    <Compile Include="Model\CalendarioContext.cs" />
+    <Compile Include="Model\Configurations\PresupuestoUsuarioAusenciaConfiguration.cs" />
+    <Compile Include="Model\Configurations\PresupuestoUsuarioTiendaNivelConfiguration.cs" />
+    <Compile Include="Model\Configurations\PresupuestoUsuarioTiendaConfiguration.cs" />
+    <Compile Include="Model\Configurations\PresupuestoUsuarioTiendaTurnoHoraConfiguration.cs" />
+    <Compile Include="Model\Configurations\PresupuestoUsuarioVacacionesConfiguration.cs" />
+    <Compile Include="Model\Configurations\TurnoCanalConfiguration.cs" />
+    <Compile Include="Model\Configurations\TurnoConfiguration.cs" />
+    <Compile Include="Model\Configurations\TurnoEmpresaConfiguration.cs" />
+    <Compile Include="Model\Configurations\UsuarioConfiguration.cs" />
+    <Compile Include="Model\Entities\Canal.cs" />
     <Compile Include="Model\Configurations\CanalConfiguration.cs" />
     <Compile Include="Model\Configurations\EmpresaConfiguration.cs" />
-    <Compile Include="Model\Configurations\TurnoConfiguration.cs" />
-    <Compile Include="Model\Empresa.cs" />
-    <Compile Include="Model\TurnoCanal.cs" />
-    <Compile Include="Model\Configurations\TurnoCanalConfiguration.cs" />
-    <Compile Include="Model\TurnoEmpresa.cs" />
-    <Compile Include="Model\Configurations\TurnoEmpresaConfiguration.cs" />
+    <Compile Include="Model\Configurations\TiendaConfiguration.cs" />
+    <Compile Include="Model\Entities\PresupuestoUsuarioAusencia.cs" />
+    <Compile Include="Model\Entities\PresupuestoUsuarioTiendaNivel.cs" />
+    <Compile Include="Model\Entities\PresupuestoUsuarioTienda.cs" />
+    <Compile Include="Model\Entities\PresupuestoUsuarioTiendaTurnoHora.cs" />
+    <Compile Include="Model\Entities\PresupuestoUsuarioVacaciones.cs" />
+    <Compile Include="Model\Entities\Empresa.cs" />
+    <Compile Include="Model\Entities\EntidadAuditada.cs" />
+    <Compile Include="Model\Entities\Tienda.cs" />
+    <Compile Include="Model\Entities\TipoUsuarioTienda.cs" />
+    <Compile Include="Model\Entities\Turno.cs" />
+    <Compile Include="Model\Entities\TurnoCanal.cs" />
+    <Compile Include="Model\Entities\TurnoEmpresa.cs" />
+    <Compile Include="Model\Entities\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Model\Turno.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201704060727186_Initial.resx">
+      <DependentUpon>201704060727186_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
